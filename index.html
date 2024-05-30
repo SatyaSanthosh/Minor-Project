@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVolution 2024 Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text" align="center">TechVolution 2024 Registration</h1>
+        <form id="registrationForm" novalidate>
+            <!-- Personal Information -->
+            <div class="form">
+                <label for="name" ><h4 >Name</h4></label>
+                <input type="text" class="form-control" id="name" >
+                <div class="invalid" id="nameError"></div>
+            </div><br>
+            <div class="form">
+                <label for="dob"><h4>Date of Birth</h4></label>
+                <input type="date" class="form-control" id="dob">
+                <div class="invalid" id="dobError"></div>
+            </div><br>
+            <div class="form">
+                <label><h4>Gender</h4></label>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male">
+                        <label class="form-check-label" for="genderMale">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+                        <label class="form-check-label" for="genderFemale">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderOthers" value="Others">
+                        <label class="form-check-label" for="genderOthers">Others</label>
+                    </div>
+                </div>
+                <div class="invalid" id="genderError"></div>
+            </div><br>
+            <div class="form"> 
+                <label for="email"><h4>Email Address</h4></label>
+                <input type="email" class="form-control" id="email">
+                <div class="invalid" id="emailError"></div>
+            </div><br>
+            <div class="form">
+                <label for="phone"><h4>Phone Number</h4></label>
+                <input type="tel" class="form-control" id="phone">
+                <div class="invalid" id="numberError"></div>
+            </div><br>
+            <div class="form">
+                <label for="street"><h4>Street Address</h4></label>
+                <input type="text" class="form-control" id="street">
+                <div class="invalid" id="streetError"></div>
+            </div><br>
+            <div class="form">
+                <label for="city"><h4>City</h4></label>
+                <input type="text" class="form-control" id="city">
+                <div class="invalid" id="cityError"></div>
+            </div><br>
+            <div class="form">
+                <label for="state"><h4>State</h4></label>
+                <select class="form-control" id="state" required>
+                    <option value="">Select your state</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="GA">Goa</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="MN">Manipur</option>
+                    <option value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="UT">Uttarakhand</option>
+                    <option value="WB">West Bengal</option>
+                </select>
+                <div class="invalid" id="stateError">
+                </div>
+            </div><br>
+            <div class="form">
+                <label for="zip"><h4>Zip Code</h4></label>
+                <input type="text" class="form-control" id="zip" pattern="[0-9]{5}">
+                <div class="invalid" id="zipcodeError"></div>
+            </div><br>
+            <div class="form">
+                <label for="preferences"><h4>Event Preferences</h4></label>
+                <select multiple class="form-control" id="preferences">
+                    <option value="workshops">Workshops</option>
+                    <option value="seminars">Seminars</option>
+                    <option value="networking">Networking Events</option>
+                </select>
+                <div class="invalid" id="eventError"></div>
+            </div><br>
+            <div class="form">
+                <label for="diet"><h4>Dietary Restrictions</h4></label>
+                <textarea class="form-control" id="diet" rows="3"></textarea>
+                <div class="invalid" id="dietError"></div>
+            </div><br>
+            <div class="form">
+                <label for="tshirt"><h4>T-shirt Size</h4></label>
+                <select class="form-control" id="tshirt">
+                    <option value="">Select your T-shirt size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+                <div class="invalid" id="sizeError"></div>
+            </div>
+            <br>
+            <div class="myclass">
+            <input type="button" value="Register" class="mybutton" onclick="validate()" >
+            </div>
+        </form>
+    <script src="script.js"></script>
+</body>
+</html>
